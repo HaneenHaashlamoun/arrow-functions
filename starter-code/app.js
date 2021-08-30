@@ -225,8 +225,8 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-// The value of this is the same as the this of the enclosing scope (the surrounding non-arrow function)
+// The constructor function (joe object).
 // 2. What is "this" when joe.scopeArrow() is invoked?
 // The this context will be, in the browser, the global window object
 // 3. Explain why "this" is different when an arrow function is used.
-//The value of this is the same as the this of the enclosing scope (the surrounding non-arrow function). If there isn’t a non-arrow function scope surrounding, the this context will be, in the browser, the global window object. Arrow functions retain the this value of the enclosing functional scope. Therefore, you will want to avoid using an arrow function in a constructor (where we need the contextual this to be the object we are building) or any method that needs to use this to behave properly.
+//Arrow functions and this. In classic function expressions, the this keyword is bound to different values based on the context in which the function is called. Whereas arrow functions use the value of this in their lexical scope. This leads to very different behaviour.
